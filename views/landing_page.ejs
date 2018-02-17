@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing Page</title>
+  <link  href="/assets/style.css" type="text/css" rel="stylesheet"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<h1> Create, Read, Update, Delete</h1>
+<p> <i>a simple demonstration</i> </p>
+
+<div class="container col-sm-10 col-sm-offset-1">
+<div  class="col-sm-10"><form > <span> type something, the click create&nbsp;&nbsp;&nbsp;&nbsp;</span><input id="thing_name" type="text"></form></div>
+<div class="col-sm-2" id="create" >
+  <p>Create</p>
+</div>
+</div>
+<div class="container col-sm-10 col-sm-offset-1">
+<div  class="col-sm-5"><form > <span> identify the document by adding the current time value here&nbsp;&nbsp;&nbsp;&nbsp;</span><input id="update_time" type="text"></form></div>
+<div  class="col-sm-5"><form > <span> add the new name value here, then click update&nbsp;&nbsp;&nbsp;&nbsp;</span><input id="update_name" type="text"></form></div>
+<div class="col-sm-2" id="update" >
+  <p>Update</p>
+</div>
+</div>
+<div class="container col-sm-10 col-sm-offset-1">
+<div  class="col-sm-10"><form > <span> delete by searching an Id value&nbsp;&nbsp;&nbsp;&nbsp;</span><input id="delete_name" type="text"></form></div>
+<div class="col-sm-2" id="delete" >
+  <p>Delete</p>
+</div>
+</div>
+<!--<div class="container col-sm-10 col-sm-offset-1">
+<div class="col-sm-12" id="read" >
+  <p>Read</p>
+</div>
+</div>-->
+<hr />
+
+
+<% if( list){ %>
+<% list.forEach( function(item){ %>
+<div class="container col-sm-10 offset-sm-1">
+  <div class="col-sm-12">
+    <p> Thing: <%= item.thing%></p>
+    <p> Time:  <%= item.time%></p>
+    <p> Id:  <%= item._id%></p>
+  </div>
+</div>
+<% });}%>
+
+  <!--<%- include( './partials/thing_from_db_partial'); %>
+
+<div class="container col-sm-10 col-sm-offset-2">
+
+<div class="col-sm-3"id="read">
+  <p>Read</p>
+</div>
+</div>-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/assets/buttons.js"></script>
+</body>
+</html>

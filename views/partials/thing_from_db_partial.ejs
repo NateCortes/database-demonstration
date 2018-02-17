@@ -1,0 +1,16 @@
+
+
+<% list.forEach( function(item){ %>
+<div class="container col-sm-10 offset-sm-1">
+  <div class="col-sm-10">
+    <p> Thing: <%= item.thing%></p>
+    <p> Time:  <%= item.time%></p>
+  </div>
+  <div class="col-sm-1"id="update">
+    <p>Update</p>
+  </div>
+  <div class="col-sm-1"id="delete">
+    <p>Delete</p>
+  </div>
+</div>
+<% });%>
