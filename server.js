@@ -10,7 +10,7 @@ const moment = require( 'moment');
 const main = require( './routes/main');
 
 const app = express();
-const port = process.env.port || 3000;
+const port = process.env.PORT || 8081;
 
 app.set( 'view engine', 'ejs');
 
